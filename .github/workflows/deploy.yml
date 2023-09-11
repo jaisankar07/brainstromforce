@@ -29,7 +29,7 @@ jobs:
       - name: Set up SSH key
         uses: webfactory/ssh-agent@v0.5.4
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_PATH }}
+          ssh-private-key: pwd ${{ secrets.SSH_PRIVATE_KEY_PATH }}
         
       #- name: Deploy to VPS
         #run: |
