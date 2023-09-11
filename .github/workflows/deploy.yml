@@ -20,7 +20,7 @@ jobs:
 
       - name: Check SSH Private Key File
         run: |
-          if [ -f ${{ secrets.SSH_PRIVATE_KEY_P }} ]; then
+          if [ -f ${{ secrets.SSH_PRIVATE_KEY }} ]; then
             echo "SSH private key file exists."
           else
             echo "SSH private key file does not exist."
@@ -29,7 +29,7 @@ jobs:
       - name: Set up SSH key
         uses: webfactory/ssh-agent@v0.5.4
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_}}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY}}
         
       #- name: Deploy to VPS
         #run: |
@@ -43,6 +43,6 @@ jobs:
           # ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'sudo systemctl restart nginx'
 
     env:
-      SSH_PRIVATE_KEY_PATH: ${{ secrets.SSH_PRIVATE_KEY_}}
+      SSH_PRIVATE_KEY_PATH: ${{ secrets.SSH_PRIVATE_KEY}}
       USERNAME: ${{ secrets.USERNAME }}
       HOST: ${{ secrets.HOST }}
