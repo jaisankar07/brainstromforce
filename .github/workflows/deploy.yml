@@ -2,8 +2,8 @@ name: Deploy WordPress
 
 on:
   push:
-    branches: 
-      - main 
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -20,7 +20,6 @@ jobs:
 
       - name: Check SSH Private Key File
         run: |
-          pwd
           if [ -f ${{ secrets.SSH_PRIVATE_KEY_PATH }} ]; then
             echo "SSH private key file exists."
           else
@@ -32,12 +31,11 @@ jobs:
         run: |
           # Define the destination directory on your VPS where you want to deploy WordPress
           destination_dir="/var/www/html/wordpress"  # Replace with the actual path
-          pwd
           ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_PRIVATE_KEY_PATH }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} "cd $destination_dir && git status"
           # Uncomment and customize SCP or SFTP command as needed
           # scp -i ${{ secrets.SSH_PRIVATE_KEY_PATH }} -r ./* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:$destination_dir/
           # Uncomment and customize service restart commands if needed
-          # ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }} 'sudo systemctl restart nginx'
+          # ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'sudo systemctl restart nginx'
 
     env:
       SSH_PRIVATE_KEY_PATH: ${{ secrets.SSH_PRIVATE_KEY_PATH }}
