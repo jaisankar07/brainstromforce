@@ -1,0 +1,70 @@
+/*font family*/
+.main-banner-section p,.main-banner-section .wp-block-button__link,.main-service-section p {
+    font-family: 'Raleway', sans-serif !important;
+}
+.main-banner-section h1,.main-service-section h2,.main-service-section h3 {
+    font-family: 'Abhaya Libre', serif !important;
+}
+/*main banner section*/
+.main-banner-section p {
+    line-height: 2;
+    font-weight: 500 !important;
+}
+.main-banner-section h1 {
+    font-weight: 900 !important;
+    letter-spacing: 3px;
+    margin-top: 0px;
+}
+.main-banner-section .wp-block-button__link {
+    padding: 12px 22px;
+    font-weight: 700 !important;
+    display: inline-block;
+}
+.main-banner-section .wp-block-button__link:hover {
+    background: #27bfff !important;
+    border-color: #27bfff !important;
+    color: #fff !important;
+    transition-duration: 1s;
+}
+/*service section*/
+.main-service-section h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.main-service-section .wp-block-columns {
+    gap: 0em !important;
+}
+.main-service-section h3 {
+    font-weight: bold;
+}
+.main-service-section p {
+    line-height: 1.8
+}
+.main-service-section img {
+    width: auto;
+}
+.box-we-do {
+    border: solid 4px #e2e2e2;
+    box-shadow: 0 0 18px 0px #e2e2e2;
+}
+.wp-block-columns:not(.is-not-stacked-on-mobile)>.box-we-do:hover {
+    background: #27bfff !important;
+}
+.box-we-do:hover p,
+.box-we-do:hover h3,
+.box-we-do:hover .wp-block-image {
+    color: #fff !important;
+}
+.main-service-section .box-we-do img {
+    filter: inherit !important;
+    -webkit-filter: inherit !important;
+}
+.main-service-section .box-we-do:hover img {
+    filter: contrast(00%) brightness(300%) !important;
+    -webkit-filter: contrast(100%) brightness(300%);
+}
+.main-service-section h2{
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    font-size: 35px !important;
+}

@@ -1,0 +1,75 @@
+/*main banner section*/
+.main-banner-section p {
+    line-height: 2;
+    font-weight: 500 !important;
+}
+.main-banner-section h1 {
+    font-weight: 900 !important;
+    letter-spacing: 3px;
+    font-family: 'Abhaya Libre', serif !important;
+}
+.main-banner-section .wp-block-button a {
+    padding: 12px 22px;
+    font-weight: 800 !important;
+    display: inline-block;
+    color: #000000 !important;
+    margin-top: 12px;
+}
+.main-banner-section .wp-block-button a:hover {
+    background: #27bfff !important;
+    border-color: #27bfff !important;
+}
+/*service section*/
+.main-service-section .wp-block-columns {
+    gap: 0em !important;
+}
+.main-service-section h2{
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+}
+.main-service-section h3 {
+    font-weight: bold;
+}
+.main-service-section p {
+    line-height: 1.8
+}
+.main-service-section img {
+    width: auto;
+}
+.box-we-do {
+    border: solid 4px #e2e2e2;
+    box-shadow: 0 0 18px 0px #e2e2e2;
+}
+.box-we-do:hover {
+    background: #27bfff !important;
+}
+.box-we-do:hover p,
+.box-we-do:hover h3,
+.box-we-do:hover .wp-block-image {
+    color: #fff !important;
+}
+.main-service-section .box-we-do img {
+    filter: inherit !important;
+    -webkit-filter: inherit !important;
+}
+.main-service-section .box-we-do:hover img {
+    filter: contrast(00%) brightness(300%) !important;
+    -webkit-filter: contrast(100%) brightness(300%);
+}
+@media screen and (max-width: 720px) {
+    .main-service-section .wp-block-columns {
+        gap: 1em !important;
+    }
+    .main-banner-section p {
+        display: none;
+    }
+    .main-banner-section h1 {
+        font-size: 30px !important;
+    }
+}
+@media screen and (max-width: 992px) and (min-width: 767px) {
+    .main-service-section .wp-block-columns {
+        gap: 0em !important;
+        flex-wrap: nowrap !important;
+    }
+}

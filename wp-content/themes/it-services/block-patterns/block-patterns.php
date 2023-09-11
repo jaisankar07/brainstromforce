@@ -1,0 +1,41 @@
+<?php
+/**
+ * It Services: Block Patterns
+ *
+ * @package It Services
+ * @since   1.0.0
+ */
+
+/**
+ * Register Block Pattern Category.
+ */
+if ( function_exists( 'register_block_pattern_category' ) ) {
+
+	register_block_pattern_category(
+		'it-services',
+		array( 'label' => __( 'It Services', 'it-services' ) )
+	);
+}
+
+/**
+ * Register Block Patterns.
+ */
+if ( function_exists( 'register_block_pattern' ) ) {
+	register_block_pattern(
+		'it-services/banner-section',
+		array(
+			'title'      => __( 'Banner Section', 'it-services' ),
+			'categories' => array( 'it-services' ),
+			'content'    => "<!-- wp:cover {\"url\":\"" . get_theme_file_uri() . "/block-patterns/images/banner.png\",\"id\":2579,\"dimRatio\":50,\"align\":\"full\",\"className\":\"main-banner-section\"} -->\n<div class=\"wp-block-cover alignfull main-banner-section\"><span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim\"></span><img class=\"wp-block-cover__image-background wp-image-2579\" alt=\"\" src=\"" . get_theme_file_uri() . "/block-patterns/images/banner.png\" data-object-fit=\"cover\"/><div class=\"wp-block-cover__inner-container\"><!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column {\"width\":\"15%\"} -->\n<div class=\"wp-block-column\" style=\"flex-basis:15%\"></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"70%\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:70%\"><!-- wp:paragraph {\"align\":\"center\",\"style\":{\"typography\":{\"fontSize\":\"14px\"}},\"textColor\":\"white\",\"className\":\"mb-md-0\"} -->\n<p class=\"has-text-align-center mb-md-0 has-white-color has-text-color\" style=\"font-size:14px\">Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,&nbsp;</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading {\"textAlign\":\"center\",\"level\":1,\"style\":{\"typography\":{\"textTransform\":\"uppercase\",\"fontSize\":\"50px\"}},\"textColor\":\"white\",\"className\":\"mb-md-0 mb-0\"} -->\n<h1 class=\"has-text-align-center mb-md-0 mb-0 has-white-color has-text-color\" style=\"font-size:50px;text-transform:uppercase\">OUTSOURCING COMPANY</h1>\n<!-- /wp:heading -->\n\n<!-- wp:buttons {\"layout\":{\"type\":\"flex\",\"verticalAlignment\":\"center\",\"justifyContent\":\"center\"}} -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"backgroundColor\":\"white\",\"textColor\":\"black\",\"align\":\"center\",\"style\":{\"border\":{\"radius\":\"30px\"}},\"fontSize\":\"small\"} -->\n<div class=\"wp-block-button aligncenter has-custom-font-size has-small-font-size\"><a class=\"wp-block-button__link has-black-color has-white-background-color has-text-color has-background\" style=\"border-radius:30px\">READ MORE</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"width\":\"15%\"} -->\n<div class=\"wp-block-column\" style=\"flex-basis:15%\"></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div>\n<!-- /wp:cover -->",
+		)
+	);
+
+	register_block_pattern(
+		'it-services/what-we-do-section',
+		array(
+			'title'      => __( 'What We Do', 'it-services' ),
+			'categories' => array( 'it-services' ),
+			'content'    => "<!-- wp:group {\"align\":\"full\",\"className\":\"main-service-section py-md-5 py-3 mx-md-5 mx-2\"} -->\n<div class=\"wp-block-group alignfull main-service-section py-md-5 py-3 mx-md-5 mx-2\"><!-- wp:heading {\"textAlign\":\"center\",\"style\":{\"typography\":{\"textTransform\":\"uppercase\"},\"color\":{\"text\":\"#27bfff\"}}} -->\n<h2 class=\"has-text-align-center has-text-color\" style=\"color:#27bfff;text-transform:uppercase\">what do we do?</h2>\n<!-- /wp:heading -->\n\n<!-- wp:columns {\"align\":\"wide\",\"className\":\"py-md-4 py-2\"} -->\n<div class=\"wp-block-columns alignwide py-md-4 py-2\"><!-- wp:column {\"backgroundColor\":\"white\",\"className\":\"box-we-do py-md-3 py-3 mx-md-3 mx-2\"} -->\n<div class=\"wp-block-column box-we-do py-md-3 py-3 mx-md-3 mx-2 has-white-background-color has-background\"><!-- wp:image {\"align\":\"center\",\"id\":2630,\"sizeSlug\":\"full\",\"linkDestination\":\"none\",\"className\":\"mb-md-2 mb-1\"} -->\n<figure class=\"wp-block-image aligncenter size-full mb-md-2 mb-1\"><img src=\"" . get_theme_file_uri() . "/block-patterns/images/service-section1.png\" alt=\"\" class=\"wp-image-2630\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:heading {\"textAlign\":\"center\",\"level\":3,\"style\":{\"typography\":{\"textTransform\":\"uppercase\",\"fontSize\":\"18px\"}},\"textColor\":\"black\"} -->\n<h3 class=\"has-text-align-center has-black-color has-text-color\" style=\"font-size:18px;text-transform:uppercase\">web development</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph {\"align\":\"center\",\"style\":{\"typography\":{\"fontSize\":\"15px\"},\"color\":{\"text\":\"#666666\"}},\"className\":\"mx-md-3 mx-2\"} -->\n<p class=\"has-text-align-center mx-md-3 mx-2 has-text-color\" style=\"color:#666666;font-size:15px\">Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text&nbsp;</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"backgroundColor\":\"white\",\"className\":\"box-we-do py-md-3 py-3 mx-md-3 mx-2\"} -->\n<div class=\"wp-block-column box-we-do py-md-3 py-3 mx-md-3 mx-2 has-white-background-color has-background\"><!-- wp:image {\"align\":\"center\",\"id\":2631,\"width\":44,\"height\":51,\"sizeSlug\":\"full\",\"linkDestination\":\"none\",\"className\":\"mb-md-2 mb-1\"} -->\n<figure class=\"wp-block-image aligncenter size-full is-resized mb-md-2 mb-1\"><img src=\"" . get_theme_file_uri() . "/block-patterns/images/service-section2.png\" alt=\"\" class=\"wp-image-2631\" width=\"44\" height=\"51\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:heading {\"textAlign\":\"center\",\"level\":3,\"style\":{\"typography\":{\"textTransform\":\"uppercase\",\"fontSize\":\"18px\"}},\"textColor\":\"black\"} -->\n<h3 class=\"has-text-align-center has-black-color has-text-color\" style=\"font-size:18px;text-transform:uppercase\">app develoment</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph {\"align\":\"center\",\"style\":{\"typography\":{\"fontSize\":\"15px\"},\"color\":{\"text\":\"#666666\"}},\"className\":\"mx-md-3 mx-2\"} -->\n<p class=\"has-text-align-center mx-md-3 mx-2 has-text-color\" style=\"color:#666666;font-size:15px\">Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text&nbsp;</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"backgroundColor\":\"white\",\"className\":\"box-we-do py-md-3 py-3 mx-md-3 mx-2\"} -->\n<div class=\"wp-block-column box-we-do py-md-3 py-3 mx-md-3 mx-2 has-white-background-color has-background\"><!-- wp:image {\"align\":\"center\",\"id\":2632,\"sizeSlug\":\"full\",\"linkDestination\":\"none\",\"className\":\"mb-md-2 mb-1\"} -->\n<figure class=\"wp-block-image aligncenter size-full mb-md-2 mb-1\"><img src=\"" . get_theme_file_uri() . "/block-patterns/images/service-section3.png\" alt=\"\" class=\"wp-image-2632\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:heading {\"textAlign\":\"center\",\"level\":3,\"style\":{\"typography\":{\"textTransform\":\"uppercase\",\"fontSize\":\"18px\"}},\"textColor\":\"black\"} -->\n<h3 class=\"has-text-align-center has-black-color has-text-color\" style=\"font-size:18px;text-transform:uppercase\">GRAPHIC DESIGN</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph {\"align\":\"center\",\"style\":{\"typography\":{\"fontSize\":\"15px\"},\"color\":{\"text\":\"#666666\"}},\"className\":\"mx-md-3 mx-2\"} -->\n<p class=\"has-text-align-center mx-md-3 mx-2 has-text-color\" style=\"color:#666666;font-size:15px\">Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text&nbsp;</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div>\n<!-- /wp:group -->",
+		)
+	);
+}

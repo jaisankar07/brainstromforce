@@ -1,0 +1,232 @@
+/*
+Theme Name: IT Services
+Theme URI: https://www.themesglance.com/themes/free-it-services-wordpress-theme/
+Author: Themesglance
+Author URI: https://www.themesglance.com/
+Description: IT Services is typically designed for the IT sector and businesses providing IT services. Whether the business is related to making and marketing computer software, SEO Agency, PPC marketing, display ads, Software Company, or an IT firm providing diverse IT solutions; it will prove ideal for starting a website for such businesses. The layout is clean and minimally designed giving you a sophisticated look for your website that also shows professionalism. The user-friendly design makes use of highly optimized codes written in compliance with the current WordPress standards and gives a highly streamlined design that results in a faster page load time. These codes are also designed to be SEO-friendly for obtaining the best ranks in search engines. Along with a beautiful design, this Bootstrap-based theme includes a Call To Action Button (CTA) that further adds to the interactive part. Its responsive slider makes use of the retina-ready images to be displayed on full screen giving a complete idea about your services. Besides this, there are slider settings and a lot of display options to try. With plenty of styling options included, anyone can easily transform the look to get a personalized website ready. It includes a number of sections such as Team, Testimonials, etc, and has social media integration for taking your business further. Demo: https://www.themesglance.com/it-company-pro/
+Requires at least: 5.0
+Tested up to: 6.3
+Requires PHP: 7.2
+Version: 0.6.1
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: it-services
+Template: it-company
+Tags: left-sidebar, right-sidebar, one-column, two-columns, three-columns, four-columns, grid-layout, wide-blocks, block-styles, block-patterns, custom-background, custom-logo, custom-menu, custom-header, featured-images, featured-image-header, footer-widgets, full-width-template, theme-options, threaded-comments, rtl-language-support, blog, news, e-commerce
+*/
+
+body{
+	font-family: 'Raleway', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Abhaya Libre', serif;
+}
+.post-info a:focus, .copyright a:focus, .more-btn a:focus, .header a:focus, .header input:focus, .footerinner a:focus{
+    outline-color: #000;
+}
+.entry-content p a, .comment p a, .footerinner .textwidget p a, #sidebar .textwidget p a, .woocommerce-product-details__short-description a{
+    text-decoration: underline;
+}
+.post-info .entry-date:hover, .post-info .entry-date:hover i, .post-info .entry-author:hover, .post-info .entry-author:hover i{
+	color: #000;
+}
+.post-info,.blogbtn a,#sidebar .search-form input[type="submit"],.pagination .current,#sidebar .tagcloud a:hover,.woocommerce-product-search button,.inner,#footer .search-form input[type="submit"],.footerinner .tagcloud a:hover,.navigation .nav-previous a, .navigation .nav-next a,#comments a.comment-reply-link,#comments input[type="submit"].submit,.bradcrumbs a:hover,.nav-menu ul ul a,h1.page-title, h1.search-title,.woocommerce span.onsale,.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt,nav.woocommerce-MyAccount-navigation ul li,.page-template-custom-front-page .top-header,.more-btn a:hover,.we-do-box:hover,.tags a:hover,.back-to-top, input[type="submit"], a.button{
+	background: #27bfff;
+}
+.woocommerce-message {
+	border-color: #27bfff ;
+}
+.woocommerce a.added_to_cart{
+	display: block;
+}
+a, .blog-sec h2 a,#sidebar h3,#sidebar ul li a:hover,.footerinner ul li a:hover,#we-do h2,.tags a i, .woocommerce-message::before{
+	color: #27bfff;
+}
+
+.blog .blog-sec, .blog #sidebar .widget,#sidebar .widget,.blog-sec{
+    box-shadow: 2px 2px #000 !important;
+}
+#wrapper .related-posts h2.related-posts-main-title, #wrapper .related-posts h3 a{
+	color: #27bfff;
+}
+/*---- Header CSS ----*/
+.header {
+    background: transparent;
+}
+.logo-inner-box {
+    clip-path: polygon(0 0, 100% 0%, 71% 100%, 0 100%);
+    background: #fff;
+    display: inline-grid;
+    padding: 30px 50px;
+}
+.logo-box {
+    filter: drop-shadow(0 10px 10px rgba(50, 50, 0, 0.5));
+    position: absolute;
+    z-index: 999;
+}
+.top-header {
+    border-bottom: none;
+    background: #27bfff;
+    clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0 100%);
+}
+.logo h1 a, .logo p.site-title a,.logo p,.nav-menu li a,.we-do-box h3 a{
+	color: #000;
+}
+.fixed-header {
+	background: #fff;
+}
+.welcome i{
+	font-size: 17px;
+}
+.page-template-custom-front-page .header {
+    position: static;
+    background-color: transparent !important;
+}
+.page-template-custom-front-page .top-header,#slider .carousel-control-prev-icon, #slider .carousel-control-next-icon{
+	border: none !important;
+}
+.post-info i{
+	margin-right: 5px;
+}
+/*---- Menu CSS ----*/
+.nav-menu ul{
+	text-align: right;
+}
+.bar-box {
+    background: #27bfff;
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+}
+.nav-menu ul ul{
+	border-color: #000;
+}
+.nav-menu ul ul a:hover {
+    background: #000;
+}
+.nav-menu ul ul a:hover,.tags a:hover{
+	border-color: #27bfff;;
+}
+.contact-details:hover i, .contact-details p:hover,
+.conatct-font:hover i, .conatct-font p:hover, .conatct-font:hover a p{
+	color: #000 !important;
+}
+.more-btn a{
+	background: #fff;
+	color: #000;
+	border-radius: 30px !important;
+}
+.more-btn a:hover,.we-do-box:hover a,.we-do-box:hover p,.bradcrumbs a{
+	color: #fff;
+}
+.we-do-box {
+    border: solid 4px #e2e2e2;
+    box-shadow: 0 0 18px 0px #e2e2e2;
+}
+.we-do-box h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#footer{
+	background: #000;
+}
+.back-to-top::after {
+    border-bottom: 20px solid #000;
+}
+.back-to-top::before{
+	border-bottom: 20px solid #27bfff;
+}
+.post-categories li a{
+	background-color: #27bfff;
+}
+.bradcrumbs span{
+	background: #27bfff;
+	color: #fff;
+}
+.bradcrumbs a{
+	background: #27bfff;
+}
+.bradcrumbs a:hover{
+	background: #232c2b;
+	color: #fff !important;
+}
+.blogbtn a,.woocommerce a.button,input#submit,.woocommerce .cart .button,a.checkout-button.button.alt.wc-forward.wp-element-button,button#place_order{
+	border-radius: 30px;
+}
+#maincontent .background-img-skin{
+	margin-top: 10%;
+}
+@media screen and (max-width: 1000px){
+	.logo-box{
+		position: static;
+	}
+	.logo-inner-box {
+	    clip-path: none;
+	    padding: 30px 15px;
+	}
+	.bar-box {
+	    display: none;
+	}
+	.top-header {
+	    clip-path: none;
+    	margin-top: 20px;
+	}
+	.welcome p{
+		padding: 0;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+	#slider .inner_carousel h1 {
+	    display: none;
+	    font-size: 25px;
+	}
+	#slider .carousel-caption {
+	    left: 20% !important;
+	    right: 20% !important;
+	}
+	input.search-field{
+		width: 58%;
+	}
+	label {
+	    display: inline;
+	}
+}
+@media screen and (min-width: 720px) and (max-width: 768px) {
+.wp-block-search__inside-wrapper{
+	display: inline-block;
+	}
+	button.wp-block-search__button.wp-element-button{
+		margin-left: 0em;
+	}
+}
+@media screen and (min-width: 720px) and (max-width: 991px) {
+	#footer .search-form input[type="submit"]{
+		padding: 14px 4%;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {	
+	.logo-box{
+	    position: static;
+	}
+	.logo-inner-box {
+	    padding: 15px;
+	}
+}
+thead, tbody, tfoot, tr, td, th {
+	border-width: 1px;
+}
+@media screen and (max-width: 320px){
+	.bradcrumbs span{
+  	padding: 7px;
+}
+}
+.nav-menu a:hover{
+	color: #27bfff !important;
+}
+#sidebar .widget{
+	padding: 15px ;
+}
