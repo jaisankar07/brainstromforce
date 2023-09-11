@@ -21,7 +21,6 @@ jobs:
         run: |
           pwd
           if [ -f SSH_PRIVATE_KEY ]; then
-          echo "SSH private key file exists."
           echo "${{ secrets.SSH_PRIVATE_KEY }}"
           else
           echo "SSH private key file does not exist."
