@@ -22,6 +22,7 @@ jobs:
           pwd
           if [ -f SSH_PRIVATE_KEY ]; then
           echo "SSH private key file exists."
+          echo SSH_PRIVATE_KEY 
           else
           echo "SSH private key file does not exist."
           exit 1  # Exit with an error if the file does not exist
@@ -31,7 +32,7 @@ jobs:
           # Define the destination directory on your VPS where you want to deploy WordPress
           destination_dir="/var/www/html/wordpress"  # Replace with the actual path
           pwd
-          ssh -o StrictHostKeyChecking=no -i SSH_PRIVATE_KEY ${{ secrets.USERNAME }}@${{ secrets.HOST }}"cd $destination_dir && git status"
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_PRIVATE_KEY }} ${{ secrets.USERNAME }}@${{ secrets.HOST }}"cd $destination_dir && git status"
           # Uncomment and customize SCP or SFTP command as needed
           # scp -i ${{ secrets.SSH_PRIVATE_KEY }} -r ./* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:$destination_dir/
           # Uncomment and customize service restart commands if needed
