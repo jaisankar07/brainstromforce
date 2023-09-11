@@ -17,28 +17,29 @@ jobs:
         run: |
           # Add commands to install any dependencies (e.g., Composer, npm)
           # Example: npm install
+
       - name: Check SSH Private Key File
         run: |
           pwd
-          if [ -f SSH_PRIVATE_KEY ]; then
-          echo "${{ secrets.SSH_PRIVATE_KEY }}"
+          if [ -f ${{ secrets.SSH_PRIVATE_KEY_PATH }} ]; then
+            echo "SSH private key file exists."
           else
-          echo "SSH private key file does not exist."
-          exit 1  # Exit with an error if the file does not exist
+            echo "SSH private key file does not exist."
+            exit 1  # Exit with an error if the file does not exist
           fi
+
       - name: Deploy to VPS
         run: |
           # Define the destination directory on your VPS where you want to deploy WordPress
           destination_dir="/var/www/html/wordpress"  # Replace with the actual path
           pwd
-          ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_PRIVATE_KEY }} ${{ secrets.USERNAME }}@${{ secrets.HOST }}"cd $destination_dir && git status"
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_PRIVATE_KEY_PATH }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} "cd $destination_dir && git status"
           # Uncomment and customize SCP or SFTP command as needed
-          # scp -i ${{ secrets.SSH_PRIVATE_KEY }} -r ./* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:$destination_dir/
+          # scp -i ${{ secrets.SSH_PRIVATE_KEY_PATH }} -r ./* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:$destination_dir/
           # Uncomment and customize service restart commands if needed
           # ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }} 'sudo systemctl restart nginx'
 
     env:
-      SSH_PUB_KEY: ${{ secrets.SSH_PUB_KEY }}
-      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      SSH_PRIVATE_KEY_PATH: ${{ secrets.SSH_PRIVATE_KEY_PATH }}
       USERNAME: ${{ secrets.USERNAME }}
       HOST: ${{ secrets.HOST }}
