@@ -26,7 +26,8 @@ jobs:
         run: |
           # Define the destination directory on your VPS where you want to deploy WordPress
           destination_dir="/var/www/html/wordpress"  # Replace with the actual path
-          ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_PRIVATE_KEY_PATH }} ${{ secrets.USERNAME }}@${{ secrets.HOST }}'cd $destination_dir && git status'
+          pwd
+          #ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_PRIVATE_KEY_PATH }} ${{ secrets.USERNAME }}@${{ secrets.HOST }}'cd $destination_dir && git status'
           # Uncomment and customize SCP or SFTP command as needed
           # scp -i ${{ secrets.SSH_PRIVATE_KEY_PATH }} -r ./* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:$destination_dir/
           # Uncomment and customize service restart commands if needed
